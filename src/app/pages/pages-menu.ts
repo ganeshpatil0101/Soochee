@@ -6,8 +6,32 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-home',
     link: '/pages/dashboard',
     home: true,
+  },  
+  {
+    title: 'Forms',
+    icon: 'nb-compose',
+    children: [
+      {
+        title: 'Form Inputs',
+        link: '/pages/forms/inputs',
+      },
+      {
+        title: 'Form Layouts',
+        link: '/pages/forms/layouts',
+      },
+    ],
   },
   {
+    title: 'Items',
+    icon: 'nb-compose',
+    children: [
+      {
+        title: 'Add',
+        link: '/pages/item/add',
+      },
+    ],
+  },
+  /*{
     title: 'FEATURES',
     group: true,
   },
@@ -154,5 +178,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/auth/reset-password',
       },
     ],
-  },
+  },*/
 ];

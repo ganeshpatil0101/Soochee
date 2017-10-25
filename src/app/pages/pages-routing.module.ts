@@ -28,6 +28,10 @@ const routes: Routes = [{
   }, {
     path: 'forms',
     loadChildren: './forms/forms.module#FormsModule',
+  },
+  {
+    path: 'item',
+    loadChildren: './item/item.module#ItemModule',
   }, {
     path: 'tables',
     loadChildren: './tables/tables.module#TablesModule',
