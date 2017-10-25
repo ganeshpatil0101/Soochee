@@ -1,50 +1,93 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-12">
     <nb-card>
-      <nb-card-header>Using the Grid</nb-card-header>
+    <!-- Category Part No Alternative No  Description TAX RATE  Machine Model QTY LOCATION  Price ($) Weight  Name of Supplier  Date of Purchase -->
+      <nb-card-header>Add Items</nb-card-header>
       <nb-card-body>
         <form>
-          <div class="form-group row">
-            <label for="inputEmail1" class="col-sm-3 col-form-label">Email</label>
-            <div class="col-sm-9">
-              <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+        <div class="row" >          
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="partNo" class="col-sm-3 col-form-label">Part No</label>
+              <input type="text" class="form-control" id="partNo" placeholder="Part No">
             </div>
           </div>
-          <div class="form-group row">
-            <label for="inputPassword2" class="col-sm-3 col-form-label">Password</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="altNo" class="col-sm-3 col-form-label">Alternative No</label>
+              <input type="text" class="form-control" id="altNo" placeholder="Alternative No">
             </div>
           </div>
-          <div class="form-group row">
-            <label class="col-sm-3">Radios</label>
-            <div class="col-sm-9">
-              <div class="form-check">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios" checked>
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option one is this and that&mdash;be sure to include why it's great</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option two can be something else and selecting it will deselect option one</span>
-                </label>
-              </div>
-              <div class="form-check disabled">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios" disabled>
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option three is disabled</span>
-                </label>
-              </div>
+        </div>
+        <div class="row" >
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="description" class="col-sm-3 col-form-label">Description</label>
+              <input type="text" class="form-control" id="description" placeholder="Description">
             </div>
           </div>
-          <div class="form-group row">
-            <div class="offset-sm-3 col-sm-9">
-              <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+        <div class="row" >
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="taxRate" class="col-sm-3 col-form-label">Tax Rate</label>
+              <input type="text" class="form-control" id="taxRate" placeholder="Tax Rate">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="qty" class="col-sm-3 col-form-label">QTY</label>
+              <input type="text" class="form-control" id="qty" placeholder="QTY">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="machine" class="col-sm-3 col-form-label">Machine</label>
+              <input type="text" class="form-control" id="machine" placeholder="Machine">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="location" class="col-sm-3 col-form-label">Location</label>
+              <input type="text" class="form-control" id="location" placeholder="Location">
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="price" class="col-sm-3 col-form-label">Price ($)</label>
+                <input type="number" class="form-control" id="price" placeholder="Price">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="weight" class="col-sm-3 col-form-label">Weight</label>
+                <input type="number" class="form-control" id="weight" placeholder="Weight">
+              </div>
+            </div>
+          </div>          
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="supplier" class="col-sm-3 col-form-label"> Name of Supplier</label>
+                <input type="text" class="form-control" id="supplier" placeholder="Name of Supplier">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="dop" class="col-sm-3 col-form-label"> Date of Purchase</label>
+                <input type="text" class="form-control" id="dop" placeholder="Date of Purchase">
+              </div>
+            </div>            
+          </div>
+          <div class="row">
+          <div class="col-sm-6">
+              <div class="form-group">              
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
             </div>
           </div>
         </form>
