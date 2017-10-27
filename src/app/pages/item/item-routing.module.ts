@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ItemComponent } from './item.component';
+import { ItemListComponent } from './item-list/item-list.component';
 import { AddItemComponent } from './add/add-item.component';
 
 const routes: Routes = [{
@@ -10,11 +11,10 @@ const routes: Routes = [{
   children: [{
     path: 'add',
     component: AddItemComponent,
-  }]
-  // }, {
-  //   path: 'layouts',
-  //   component: FormLayoutsComponent,
-  // }],
+  }, {
+    path: 'list',
+    component: ItemListComponent,
+  }],
 }];
 
 @NgModule({
@@ -31,5 +31,6 @@ export class ItemRoutingModule {
 
 export const routedComponents = [
   ItemComponent,
+  ItemListComponent,
   AddItemComponent,
 ];

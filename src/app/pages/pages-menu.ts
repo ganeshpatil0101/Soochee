@@ -28,6 +28,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Add',
         link: '/pages/item/add',
+      },{
+        title: 'Item-List',
+        link: '/pages/item/list',
       },
     ],
   },
