@@ -33,6 +33,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/item/list',
       },
     ],
+  },{
+    title: 'Suppliers',
+    icon: 'nb-compose',
+    children: [
+      {
+        title: 'Add',
+        link: '/pages/supplier/add',
+      },{
+        title: 'Supplier-List',
+        link: '/pages/supplier/list',
+      },
+    ],
   },
   /*{
     title: 'FEATURES',
