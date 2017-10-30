@@ -14,30 +14,34 @@
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="altNo" class="col-sm-3 col-form-label">Alternative No</label>
+              <label for="altNo" class="col-sm-3 col-form-label">Alt. No</label>
               <input type="text" class="form-control" id="altNo" placeholder="Alternative No">
             </div>
           </div>
         </div>
-        <div class="row" >
-        <div class="col-sm-6">
-            <div class="form-group">
-              <label for="description" class="col-sm-3 col-form-label">Description</label>
-              <input type="text" class="form-control" id="description" placeholder="Description">
-            </div>
-          </div>
-        </div>
+        
         <div class="row" >
           <div class="col-sm-6">
             <div class="form-group">
               <label for="taxRate" class="col-sm-3 col-form-label">Tax Rate</label>
               <input type="text" class="form-control" id="taxRate" placeholder="Tax Rate">
             </div>
+          
           </div>
-          <div class="col-sm-6">
+ <div class="col-sm-6">
             <div class="form-group">
-              <label for="qty" class="col-sm-3 col-form-label">QTY</label>
-              <input type="text" class="form-control" id="qty" placeholder="QTY">
+              <label for="weight" class="col-sm-3 col-form-label">Weight</label>
+              <input type="number" class="form-control" id="weight" placeholder="Weight">
+            </div>
+ </div>
+         
+        </div>
+        <div class="row" >
+        <div class="col-sm-6" style="min-width:100%">
+            <div class="form-group" style="min-width:100%">
+              <label for="description" class="col-sm-3 col-form-label" style="min-width:100%">Description</label>
+             
+              <textarea _ngcontent-c8="" class="form-control" placeholder="Text Area" id="description" rows="5"></textarea>
             </div>
           </div>
         </div>
@@ -47,6 +51,7 @@
               <label for="machine" class="col-sm-3 col-form-label">Machine</label>
               <input type="text" class="form-control" id="machine" placeholder="Machine">
             </div>
+            
           </div>
           <div class="col-sm-6">
             <div class="form-group">
@@ -61,24 +66,12 @@
             </div>
           </div>
           </div>
-          <div class="row">
+            
+          <div class="row" style="min-width:100%; border:solid">
+          
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="price" class="col-sm-3 col-form-label">Price ($)</label>
-                <input type="number" class="form-control" id="price" placeholder="Price">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="weight" class="col-sm-3 col-form-label">Weight</label>
-                <input type="number" class="form-control" id="weight" placeholder="Weight">
-              </div>
-            </div>
-          </div>          
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="supplier" class="col-sm-3 col-form-label"> Name of Supplier</label>
+                <label for="supplier" class="col-sm-3 col-form-label"> Supplier</label>
                 <select id="supplier" class="form-control">
                   <option>Supplier 1</option>
                   <option>Supplier 2</option>
@@ -88,13 +81,34 @@
                 </select>
               </div>
             </div>
-            <div class="col-sm-6">
+             <div class="col-sm-6">
               <div class="form-group">
-                <label for="dop" class="col-sm-3 col-form-label"> Date of Purchase</label>
+                <label for="price" class="col-sm-3 col-form-label">Price ($)</label>
+                <input type="number" class="form-control" id="price" placeholder="Price">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group" style="min-width:100%">
+                <label for="dop" class="col-sm-3 col-form-label" style="min-width:100%"> Purchase Date</label>
                 <input type="text" class="form-control" id="dop" placeholder="Date of Purchase">
               </div>
-            </div>            
+            </div>    
+             <div class="col-sm-6">
+            <div class="form-group">
+              <label for="qty" class="col-sm-3 col-form-label">QTY</label>
+              <input type="text" class="form-control" id="qty" placeholder="QTY">
+            </div>
           </div>
+          <div class="col-sm-6">
+          </div>
+              <div class="col-sm-6">
+              <div class="form-group">              
+                <button type="button" class="btn btn-primary">Add</button>
+              </div>
+            </div>
+         
+          </div>
+
           <div class="row">
           <div class="col-sm-6">
               <div class="form-group">              
