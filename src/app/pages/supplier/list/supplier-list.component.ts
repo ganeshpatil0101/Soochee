@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { SmartTableService } from '../../../@core/data/smart-table.service';
+import { SupplierService } from '../../../@core/data/supplier.service';
 
 @Component({
   selector: 'ngx-supplier-list',
@@ -13,54 +13,39 @@ import { SmartTableService } from '../../../@core/data/smart-table.service';
   `],
 })
 export class SupplierListComponent {
-  /*    
-    */
   public settings = {
-add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
+    actions:{
+      add:false,
+      edit:false,
+      position:'right'
     },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
     columns: {
-      partNo: {
-        title: 'Part No',
+      id: {
+        title: 'Id',
         type: 'number',
       },
-      description: {
-        title: 'Description',
+      name: {
+        title: 'Name',
         type: 'string',
       },
-      machineModel: {
-        title: 'Machine Model',
+      address: {
+        title: 'Address',
         type: 'string',
       },
-      price: {
-        title: 'Price ($)',
+      cnumber: {
+        title: 'Contact No',
         type: 'number',
-      },
-      supplier: {
-        title: 'Supplier',
-        type: 'string',
-      },
-      date: {
-        title: 'Date',
-        type: 'string',
-      },
+      }
     },
   };
 
   public source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: SmartTableService) {
+  constructor(private service: SupplierService) {
     const data = this.service.getData();
     this.source.load(data);
   }
