@@ -24,6 +24,9 @@ export class ItemListComponent {
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
+    }, edit: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true,
     },
     columns: {
       partNo: {

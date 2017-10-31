@@ -1,8 +1,7 @@
 <div class="row">
   <div class="col-md-12">
     <nb-card>
-    <!-- Category Part No Alternative No  Description TAX RATE  Machine Model QTY LOCATION  Price ($) Weight  Name of Supplier  Date of Purchase -->
-      <nb-card-header>Add Items</nb-card-header>
+       <nb-card-header>Add Items</nb-card-header>
       <nb-card-body>
         <form>
         <div class="row" >          
@@ -14,87 +13,107 @@
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="altNo" class="col-sm-3 col-form-label">Alternative No</label>
+              <label for="altNo" class="col-sm-3 col-form-label">Alt. No</label>
               <input type="text" class="form-control" id="altNo" placeholder="Alternative No">
             </div>
           </div>
         </div>
-        <div class="row" >
-        <div class="col-sm-6">
-            <div class="form-group">
-              <label for="description" class="col-sm-3 col-form-label">Description</label>
-              <input type="text" class="form-control" id="description" placeholder="Description">
-            </div>
-          </div>
-        </div>
+        
         <div class="row" >
           <div class="col-sm-6">
             <div class="form-group">
               <label for="taxRate" class="col-sm-3 col-form-label">Tax Rate</label>
               <input type="text" class="form-control" id="taxRate" placeholder="Tax Rate">
             </div>
+          
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="qty" class="col-sm-3 col-form-label">QTY</label>
-              <input type="text" class="form-control" id="qty" placeholder="QTY">
+              <label for="weight" class="col-sm-3 col-form-label">Weight</label>
+              <input type="number" class="form-control" id="weight" placeholder="Weight">
             </div>
           </div>
         </div>
+        
+        <div class="row" >
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="description" class="col-sm-3 col-form-label" >Description</label>
+              <textarea class="form-control" placeholder="Description" id="description" rows="5"></textarea>
+            </div>
+          </div>
+        </div>
+
         <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="machine" class="col-sm-3 col-form-label">Machine</label>
-              <input type="text" class="form-control" id="machine" placeholder="Machine">
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="location" class="col-sm-3 col-form-label">Location</label>
-                <select id="location" class="form-control">
-                  <option>India</option>
-                  <option>USA</option>
-                  <option>Chaina</option>
-                  <option>Australia</option>
-                  <option>Singapore</option>
-                </select>
-            </div>
-          </div>
-          </div>
-          <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="price" class="col-sm-3 col-form-label">Price ($)</label>
-                <input type="number" class="form-control" id="price" placeholder="Price">
+                <label for="machine" class="col-sm-3 col-form-label">Machine</label>
+                <input type="text" class="form-control" id="machine" placeholder="Machine">
               </div>
+              
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <label for="weight" class="col-sm-3 col-form-label">Weight</label>
-                <input type="number" class="form-control" id="weight" placeholder="Weight">
+                <label for="location" class="col-sm-3 col-form-label">Location</label>
+                  <select id="location" class="form-control">
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>Chaina</option>
+                    <option>Australia</option>
+                    <option>Singapore</option>
+                  </select>
               </div>
             </div>
-          </div>          
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="supplier" class="col-sm-3 col-form-label"> Name of Supplier</label>
-                <select id="supplier" class="form-control">
-                  <option>Supplier 1</option>
-                  <option>Supplier 2</option>
-                  <option>Supplier 3</option>
-                  <option>Supplier 4</option>
-                  <option>Supplier 5</option>
-                </select>
+            </div>
+            <div class="row">
+                 <nb-card>
+       <nb-card-header>Price</nb-card-header>
+      <nb-card-body> 
+            <div class="row">
+              <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="supplier" class="col-sm-3 col-form-label"> Supplier</label>
+                    <select id="supplier" class="form-control">
+                      <option>Supplier 1</option>
+                      <option>Supplier 2</option>
+                      <option>Supplier 3</option>
+                      <option>Supplier 4</option>
+                      <option>Supplier 5</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="price" class="col-sm-3 col-form-label">Price ($)</label>
+                    <input type="number" class="form-control" id="price" placeholder="Price">
+                  </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="dop" class="col-sm-3 col-form-label"> Date of Purchase</label>
-                <input type="text" class="form-control" id="dop" placeholder="Date of Purchase">
+            <div class="row">
+              <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="dop" class="col-sm-3 col-form-label"> Purchase Date</label>
+                    <input type="text" class="form-control" id="dop" placeholder="Date of Purchase">
+                  </div>
+              </div>    
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="qty" class="col-sm-3 col-form-label">QTY</label>
+                  <input type="text" class="form-control" id="qty" placeholder="QTY">
+                </div>
+              </div>  
+            </div>
+            <div class="row" >
+              <div class="col-sm-6">
+                <div class="form-group">              
+                  <button type="button" class="btn btn-primary">Add</button>
+                </div>
               </div>
-            </div>            
+            </div>
+            </nb-card-body>
+            </nb-card>
           </div>
+
           <div class="row">
           <div class="col-sm-6">
               <div class="form-group">              
