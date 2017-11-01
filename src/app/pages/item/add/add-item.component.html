@@ -66,57 +66,59 @@
             </div>
             </div>
             <div class="row">
-                 <nb-card>
-       <nb-card-header>Price</nb-card-header>
-      <nb-card-body> 
-            <div class="row">
-              <div class="col-sm-6">
-                  <div class="form-group">
-                    <label for="supplier" class="col-sm-3 col-form-label"> Supplier</label>
-                    <select id="supplier" class="form-control">
-                      <option>Supplier 1</option>
-                      <option>Supplier 2</option>
-                      <option>Supplier 3</option>
-                      <option>Supplier 4</option>
-                      <option>Supplier 5</option>
-                    </select>
+            <div class="col-md-12">
+             <nb-card>
+             <nb-card-header>Price</nb-card-header>
+              <nb-card-body> 
+                  <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="supplier" class="col-sm-3 col-form-label"> Supplier</label>
+                          <select id="supplier" class="form-control">
+                            <option>Supplier 1</option>
+                            <option>Supplier 2</option>
+                            <option>Supplier 3</option>
+                            <option>Supplier 4</option>
+                            <option>Supplier 5</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="price" class="col-sm-3 col-form-label">Price ($)</label>
+                          <input type="number" class="form-control" id="price" placeholder="Price">
+                        </div>
+                    </div>
                   </div>
-              </div>
-              <div class="col-sm-6">
-                  <div class="form-group">
-                    <label for="price" class="col-sm-3 col-form-label">Price ($)</label>
-                    <input type="number" class="form-control" id="price" placeholder="Price">
+                  <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="dop" class="col-sm-3 col-form-label"> Purchase Date</label>
+                          <input type="text" class="form-control" id="dop" placeholder="Date of Purchase">
+                        </div>
+                    </div>    
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="qty" class="col-sm-3 col-form-label">QTY</label>
+                        <input type="text" class="form-control" id="qty" placeholder="QTY">
+                      </div>
+                    </div>  
                   </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                  <div class="form-group">
-                    <label for="dop" class="col-sm-3 col-form-label"> Purchase Date</label>
-                    <input type="text" class="form-control" id="dop" placeholder="Date of Purchase">
+                  <div class="row" >
+                    <div class="col-sm-6">
+                      <div class="form-group">              
+                        <button type="button" class="btn btn-primary">Add</button>
+                      </div>
+                    </div>
                   </div>
-              </div>    
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <label for="qty" class="col-sm-3 col-form-label">QTY</label>
-                  <input type="text" class="form-control" id="qty" placeholder="QTY">
-                </div>
-              </div>  
-            </div>
-            <div class="row" >
-              <div class="col-sm-6">
-                <div class="form-group">              
-                  <button type="button" class="btn btn-primary">Add</button>
-                </div>
-              </div>
-            </div>
             </nb-card-body>
             </nb-card>
+          </div>
           </div>
 
           <div class="row">
           <div class="col-sm-6">
-              <div class="form-group">              
+              <div class="form-group">
                 <button type="submit" class="btn btn-primary">Save</button>
               </div>
             </div>
