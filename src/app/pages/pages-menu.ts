@@ -46,6 +46,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
+  {
+    title: 'Sales',
+    icon: 'nb-compose',
+    link: '/pages/sales/add',
+  },
   /*{
     title: 'FEATURES',
     group: true,
