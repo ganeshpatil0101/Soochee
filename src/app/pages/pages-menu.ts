@@ -1,7 +1,7 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
-  {
+  /*{
     title: 'Dashboard',
     icon: 'nb-home',
     link: '/pages/dashboard',
@@ -20,7 +20,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/forms/layouts',
       },
     ],
-  },
+  },*/
   {
     title: 'Items',
     icon: 'nb-compose',
@@ -45,6 +45,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/supplier/list',
       },
     ],
+  },
+  {
+    title: 'Sales',
+    icon: 'nb-compose',
+    link: '/pages/sales/add',
   },
   /*{
     title: 'FEATURES',
