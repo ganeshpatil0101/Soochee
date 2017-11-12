@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {DataTableModule} from 'angular-2-data-table';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     HttpModule,
     AppRoutingModule,
+    DataTableModule,
 
     NgbModule.forRoot(),
     ThemeModule.forRoot(),

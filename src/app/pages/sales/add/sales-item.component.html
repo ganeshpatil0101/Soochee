@@ -2,64 +2,125 @@
   <div class="col-md-12">
     <nb-card>
        <nb-card-header>Sales</nb-card-header>
+      
        <!-- PART NAME PO NO SITE NAME NO  OF ITEMS  QTY UNIT PRICE  DATE -->
       <nb-card-body>
-        <form>
-        <div class="row" >          
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="partName" class="col-sm-3 col-form-label">Part Name</label>
-              <input type="text" class="form-control" id="partName" placeholder="Part Name">
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="poNo" class="col-sm-3 col-form-label">Po No</label>
-              <input type="text" class="form-control" id="poNo" placeholder="Po No">
-            </div>
-          </div>
+        <div _ngcontent-c9="" class="row">
+             <div _ngcontent-c14="" class="col-lg-5">
+             <label for="site" class="col-sm-3 col-form-label">Search</label>
+         <input #search class="form-control" type="text" accesskey="t" placeholder="Type Part Name or Part Number" (keydown.enter)="onSearch(search.value)" >
+             </div>
+                <div _ngcontent-c14="" class="col-lg-4">
+          <label for="site" class="col-sm-3 col-form-label" style="min-width:150px">Search By</label>
+         <select _ngcontent-c9="" class="form-control" id="searchFilter" >
+                            <option _ngcontent-c9="">Part Name</option>
+                            <option _ngcontent-c9="">Part Number</option>
+                            
+                                                   </select>
+                </div>
+                 <div _ngcontent-c14="" class="col-lg-3">
+          <button _ngcontent-c24="" class="btn btn-success btn-round btn-demo ">New Item</button>
+                </div>
         </div>
-        
-        <div class="row" >
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="siteName" class="col-sm-3 col-form-label">Site Name</label>
-              <input type="text" class="form-control" id="siteName" placeholder="Site Name">
-            </div>
-          
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="noOfItems" class="col-sm-3 col-form-label">No Of Items</label>
-              <input type="number" class="form-control" id="noOfItems" placeholder="No Of Items">
-            </div>
-          </div>
-        </div>
-        
-        <div class="row" >
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="qty" class="col-sm-3 col-form-label" >Quantity</label>
-              <input type="number" class="form-control" placeholder="Quantity" id="qty" >
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="date" class="col-sm-3 col-form-label" >Date</label>
-              <input type="text" class="form-control" placeholder="Date" id="date" >
-            </div>
-          </div>
-        </div>
-
-          <div class="row">
-          <div class="col-sm-6">
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary">Save</button>
+            <div _ngcontent-c9="" class="row">
+              <div _ngcontent-c14="" class="col-lg-6">
+               <label for="site" class="col-sm-3 col-form-label">Site</label>
+         <input #site class="form-control" type="text" accesskey="s" placeholder="Site"  style="min-width:250px" >
               </div>
-            </div>
-          </div>
-        </form>
+              <div _ngcontent-c14="" class="col-lg-6">
+         <label for="site" class="col-sm-3 col-form-label">Po. Number</label>
+         <input #site class="form-control" type="text" accesskey="s" placeholder="Po.Number"  style="min-width:250px" >
+              </div>
+        </div>
+       
       </nb-card-body>
     </nb-card>
+<div _ngcontent-c14="" class="col-lg-10">
+        <nb-card>
+            
+       <!-- PART NAME PO NO SITE NAME NO  OF ITEMS  QTY UNIT PRICE  DATE -->
+      <nb-card-body style="padding:0px">
+      <!--<ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>-->
+     <data-table
+    [items]="this.data"
+  
+  
+
+    [pagination]="false"
+    [indexColumn]="false"
+    [selectColumn]="false"
+    [multiSelect]="false"
+    [rowColors]="rowColors"
+    >
+    <data-table-column
+      property="partNo"
+      header="Part Number"
+      sortable="true">
+      <!--<ng-template #dataTableCell let-item="item">
+        <input type="number" [(ngModel)]="item.partNo" class="form-control input-sm" style="width: 75px"/>
+      </ng-template>-->
+    </data-table-column>
+    <data-table-column
+      property="partName"
+      header="Part Name">
+    </data-table-column>
+    <data-table-column
+      property="noOfItems"
+      header="No of Items">
+          <!--<ng-template #dataTableCell let-item="item">
+        <input type="number" accesskey="s"  [(ngModel)]="item.noOfItems" class="form-control input-sm" style="width: 75px"/>
+      </ng-template>-->
+    </data-table-column>
+    <data-table-column
+      property="quantity"
+      header="Quantity">
+       <ng-template #dataTableCell let-item="item">
+        <input type="number" accesskey="s"  [(ngModel)]="item.quantity" class="form-control input-sm" style="width: 75px"/>
+      </ng-template>
+     
+    </data-table-column>
+       <data-table-column
+      property="hsnCode"
+      header="HSN Code">
+            
+    </data-table-column>
+            <data-table-column
+      property="supplier"
+      header="Supplier">
+         <ng-template #dataTableCell let-item="item">
+        <!--<input type="string" accesskey="s"  [(ngModel)]="item.supplier" class="form-control input-sm" style="width: 120px"/>-->
+      <select (change)="supplierSelected(item)" class="form-control input-sm">
+        <option value="sp1">supplier1</option>
+        <option value="sp2">supplier2</option>
+        <option value="sp3">supplier3</option>
+      </select>
+      </ng-template>
+    </data-table-column>
+        <data-table-column
+      property="price"
+      header="Unit Price($)">
+             <ng-template #dataTableCell let-item="item">
+        <input type="string" accesskey="p" [(ngModel)]="item.price" class="form-control input-sm" style="width: 75px"/>
+      </ng-template>
+    </data-table-column>
+    <data-table-column
+      header="Actions">
+      <template #dataTableHeader let-item="item">
+        <i>Actions</i>
+      </template>
+      <template #dataTableCell let-item="item">
+        <button (click)="carClicked(item)" class="btn btn-sm btn-default">Remove</button>
+      </template>
+    </data-table-column>
+  </data-table>
+
+      </nb-card-body>
+    </nb-card>
+</div>
+<div _ngcontent-c15="" class="col-lg-6">
+</div>
+  
+ 
   </div>
 </div>
