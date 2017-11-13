@@ -4,8 +4,88 @@
   </nb-card-header>
 
   <nb-card-body>
-      <input #search class="search" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
-    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
-    </ng2-smart-table>
+    <input #search class="search" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+    <!--<ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>-->
+     <data-table
+    [items]="this.data"
+  
+  
+  [expandableRows]="true"
+    [pagination]="false"
+    [indexColumn]="false"
+    [selectColumn]="false"
+    [multiSelect]="false"
+    [rowColors]="rowColors"
+    >
+     <template #dataTableExpand let-item="item">
+            <div [textContent]="item.qty" style="padding: 5px; color: gray"></div>
+             <div [textContent]="item.location" style="padding: 5px; color: gray"></div>
+             <data-table [items]="this.itemdetails"     [pagination]="false"
+    [indexColumn]="false"
+    [selectColumn]="false"
+    [multiSelect]="false"
+    [rowColors]="rowColors">
+
+                <data-table-column
+      property="qty"
+      header="Qty">
+            
+    </data-table-column>
+         <data-table-column
+      property="location"
+      header="Location">
+            
+    </data-table-column>
+         <data-table-column
+      property="supplier"
+      header="Supplier">
+            
+    </data-table-column>
+     <data-table-column
+      property="price"
+      header="Unit Price($)">
+          
+    </data-table-column>
+             </data-table>
+        </template>
+    <data-table-column
+      property="partNo"
+      header="Part Number"
+      sortable="true">
+      <!--<ng-template #dataTableCell let-item="item">
+        <input type="number" [(ngModel)]="item.partNo" class="form-control input-sm" style="width: 75px"/>
+      </ng-template>-->
+    </data-table-column>
+    <data-table-column
+      property="partName"
+      header="Part Name">
+    </data-table-column>
+    <data-table-column
+      property="noOfItems"
+      header="No of Items">
+          <!--<ng-template #dataTableCell let-item="item">
+        <input type="number" accesskey="s"  [(ngModel)]="item.noOfItems" class="form-control input-sm" style="width: 75px"/>
+      </ng-template>-->
+    </data-table-column>
+   
+       <data-table-column
+      property="hsnCode"
+      header="HSN Code">
+            
+    </data-table-column>
+   
+       
+    <data-table-column
+      header="Actions">
+      <template #dataTableHeader let-item="item">
+        <i>Actions</i>
+      </template>
+      <template #dataTableCell let-item="item">
+        <button (click)="carClicked(item)" class="btn btn-sm btn-default">Remove</button>
+      </template>
+    </data-table-column>
+  </data-table>
+
   </nb-card-body>
 </nb-card>

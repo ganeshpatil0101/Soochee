@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
 import { SmartTableService } from '../../../@core/data/smart-table.service';
+import { DataTable, DataTableTranslations, DataTableResource } from 'angular-2-data-table';
 
 @Component({
   selector: 'ngx-item-list',
@@ -13,7 +14,9 @@ import { SmartTableService } from '../../../@core/data/smart-table.service';
   `],
 })
 export class ItemListComponent {
-  /*    
+   private dataTableResource;
+
+  /*
     */
   public settings = {
     actions: {
@@ -31,6 +34,24 @@ export class ItemListComponent {
     columns: {
       partNo: {
         title: 'Part No',
+        type: 'number',
+        filter: false,
+      },
+       category: {
+        title: 'Category',
+        type: 'string',
+        filter: false,
+      },
+        altNo: {
+        title: 'Alternative No',
+        type: 'string',
+        filter: false,
+      },  qty: {
+        title: 'Qty',
+        type: 'number',
+        filter: false,
+      },  weight: {
+        title: 'Weight',
         type: 'number',
         filter: false,
       },
@@ -63,16 +84,97 @@ export class ItemListComponent {
     },
   };
 
+  itemdetails =[{qty: 100, location: 'ITR-10', supplier: 'Supplier1' , price: 20},
+ {qty: 10, location: 'ITR-G', supplier: 'Supplier2' , price: 40}
+ , { qty: 20, location: 'ITR-w', supplier: 'Supplier3' , price: 30}];
+
+    data = [{
+    partNo: 1,
+    partName: 'test Item' ,
+    description: 'test item',
+    machineModel: 'model 1',
+    price: 250,
+    supplier: 'supplier 1',
+    date: '27/10/2017',
+    hsnCode: 123123,
+      quantity: 1,
+         noOfItems: 1,
+  },
+  {
+    partNo: 2,
+       partName: 'test Item2' ,
+    description: 'test item 2',
+    machineModel: 'model 2',
+    price: 300,
+    supplier: 'supplier 2',
+    date: '27/10/2017',
+      hsnCode: 123123,
+         noOfItems: 1,
+        quantity: 1,
+  },
+  {
+    partNo: 3,
+       partName: 'test Item3' ,
+    description: 'test item 3',
+    machineModel: 'model 3',
+    price: 350,
+    supplier: 'supplier 3',
+    date: '27/10/2017',
+      hsnCode: 123123,
+         noOfItems: 4,
+        quantity: 1,
+  },
+  {
+    partNo: 4,
+       partName: 'test Item4' ,
+    description: 'test item 4',
+    machineModel: 'model 4',
+    price: 500,
+    supplier: 'supplier 4',
+    date: '27/10/2017',
+    hsnCode: 123123,
+       noOfItems: 3,
+    quantity: 1,
+  },
+  {
+    partNo: 5,
+       partName: 'test Item5' ,
+    description: 'test item 5',
+    machineModel: 'model 5',
+    price: 400,
+    supplier: 'supplier 5',
+    date: '27/10/2017',
+    hsnCode: 123123,
+       noOfItems: 1,
+      quantity: 1,
+  },
+  {
+    partNo: 6,
+       partName: 'test Item6' ,
+    description: 'test item 6',
+    machineModel: 'model 6',
+    price: 600,
+    supplier: 'supplier 6',
+    date: '27/10/2017',
+    hsnCode: 123123,
+    noOfItems: 2,
+      quantity: 1,
+  },
+  ];
+
 
 
   public source: LocalDataSource = new LocalDataSource();
-
+ @ViewChild(DataTable) carsTable: DataTable;
   constructor(private service: SmartTableService) {
-    const data = this.service.getData();
-    this.source.load(data);
+    // const data = this.service.getData();
+    // this.source.load(data);
+       this.dataTableResource = new DataTableResource(this.data);
   }
 
+
   onSearch(query: string = '') {
+    this.dataTableResource.query(query);
     this.source.setFilter([
       // fields we want to inclue in the search
       {

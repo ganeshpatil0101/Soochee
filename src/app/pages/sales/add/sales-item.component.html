@@ -10,19 +10,21 @@
              <label for="site" class="col-sm-3 col-form-label">Search</label>
          <input #search class="form-control" type="text" accesskey="t" placeholder="Type Part Name or Part Number" (keydown.enter)="onSearch(search.value)" >
              </div>
-                <div _ngcontent-c14="" class="col-lg-4">
+                <!--<div _ngcontent-c14="" class="col-lg-4">
           <label for="site" class="col-sm-3 col-form-label" style="min-width:150px">Search By</label>
          <select _ngcontent-c9="" class="form-control" id="searchFilter" >
                             <option _ngcontent-c9="">Part Name</option>
                             <option _ngcontent-c9="">Part Number</option>
                             
                                                    </select>
-                </div>
-                 <div _ngcontent-c14="" class="col-lg-3">
-          <button _ngcontent-c24="" class="btn btn-success btn-round btn-demo ">New Item</button>
+                </div>-->
+                 <div _ngcontent-c14="" class="col-lg-2">
+                    <label for="customerId" class="col-sm-3 col-form-label"></label>
+          <button _ngcontent-c24="" class="btn btn-success btn-round btn-demo form-control">New Item</button>
                 </div>
         </div>
-            <div _ngcontent-c9="" class="row">
+
+        <div _ngcontent-c9="" class="row">
               <div _ngcontent-c14="" class="col-lg-6">
                <label for="site" class="col-sm-3 col-form-label">Site</label>
          <input #site class="form-control" type="text" accesskey="s" placeholder="Site"  style="min-width:250px" >
@@ -32,10 +34,20 @@
          <input #site class="form-control" type="text" accesskey="s" placeholder="Po.Number"  style="min-width:250px" >
               </div>
         </div>
+             <div _ngcontent-c9="" class="row">
+              <div _ngcontent-c14="" class="col-lg-6">
+               <label for="customerId" class="col-sm-3 col-form-label">Customer</label>
+         <input #site class="form-control" type="text" accesskey="s" placeholder="Customer"  style="min-width:250px" >
+              </div>
+              <div _ngcontent-c14="" class="col-lg-2" style="min-width:75px">
+      <label for="customerId" class="col-sm-3 col-form-label"></label>
+        <button _ngcontent-c24="" class="form-control btn btn-success btn-round btn-demo " style="min-width:75px">New Customer</button>
+              </div>
+        </div>
        
       </nb-card-body>
     </nb-card>
-<div _ngcontent-c14="" class="col-lg-10">
+<div _ngcontent-c14="" class="col-lg-11">
         <nb-card>
             
        <!-- PART NAME PO NO SITE NAME NO  OF ITEMS  QTY UNIT PRICE  DATE -->
@@ -97,6 +109,18 @@
       </select>
       </ng-template>
     </data-table-column>
+                <data-table-column
+      property="location"
+      header="Location">
+         <ng-template #dataTableCell let-item="item">
+        <!--<input type="string" accesskey="s"  [(ngModel)]="item.supplier" class="form-control input-sm" style="width: 120px"/>-->
+      <select class="form-control input-sm">
+        <option value="sp1">location1</option>
+        <option value="sp2">location2</option>
+        <option value="sp3">location3</option>
+      </select>
+      </ng-template>
+    </data-table-column>
         <data-table-column
       property="price"
       header="Unit Price($)">
@@ -118,7 +142,28 @@
       </nb-card-body>
     </nb-card>
 </div>
-<div _ngcontent-c15="" class="col-lg-6">
+<div _ngcontent-c15="" class="col-lg-4">
+  <nb-card>
+    <nb-card-body>
+       <label for="site" class="col-sm-3 col-form-label">Total:</label>
+        <label for="site" class="col-sm-3 col-form-label">{{this.getTotal()}}</label>
+       <div _ngcontent-c9="" class="row">
+              <div _ngcontent-c14="" class="col-lg-6">
+               <label for="amountTendered" class="col-sm-3 col-form-label">Amount Tendered</label>
+         <input #site class="form-control" type="text" accesskey="s" placeholder="Amount Tendered"  style="min-width:250px" >
+              </div>
+             
+
+        </div>
+<div _ngcontent-c9="" class="row">
+   <div _ngcontent-c14="" class="col-lg-6" >
+      <label for="customerId" class="col-sm-3 col-form-label"></label>
+        <button _ngcontent-c24="" class="form-control btn btn-success btn-round btn-demo " style="min-width:75px">Complete</button>
+              </div>
+</div>
+      
+     </nb-card-body>
+    </nb-card>
 </div>
   
  
